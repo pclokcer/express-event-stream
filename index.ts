@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
       res.end(); // terminates SSE session
       return;
     }
-    res.write(`data: ${JSON.stringify({ num: counter })}\r\n`); // res.write() instead of res.send()
+    res.write(`data: ${JSON.stringify({ num: counter })}\n\n`); // res.write() instead of res.send()
   }, 1000);
 
   // If client closes connection, stop sending events
